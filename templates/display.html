@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card">
+    <div class="card-header">
+      <div class="row">
+        <h1>Pet List</h1>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <tr>
+            <th>Pet Name</th>
+            <th>Pet Owner</th>
+            <th>Email Address</th>
+            <th>Species</th>
+            <th>Sex</th>
+            <th>Birth</th>
+            <th>Action</th>
+        </tr>
+        {%  for pet in petList %}
+        <tr>
+          <td>{{ pet.name }}</td>
+          <td>{{ pet.owner }}</td>
+          <td>{{ pet.email }}</td>
+          <td>{{ pet.species }}</td>
+          <td>{{ pet.sex }}</td>
+          <td>{{ pet.birth }}</td>
+          <td></td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+
+{% endblock %}
