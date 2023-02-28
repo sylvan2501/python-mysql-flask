@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Welcome Pet Administrator !</h1>
+<a href="{{url_for('display')}}"><button>Display Pets</button></a>
+<a href="{{url_for('logout')}}"><button>Log Out</button></a>
+{% endblock %}
